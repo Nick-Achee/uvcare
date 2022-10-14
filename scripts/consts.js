@@ -1,5 +1,5 @@
-export const openuvApiToken = "85797c8abf405c359f7f51563fc05172";
-export const openuvApiURL = "https://api.openuv.io/api/v1";
+export const openuvApiToken = "346561c2e8edb8599ca6b3ce0f091915";
+export const openuvApiURL = "https://api.openuv.io/api/v1/uv";
 
 export const openweatherApiToken = "c1d13ca3ce67ce7193a0ba5b70468f07";
 export const openweatherApiUrl =
