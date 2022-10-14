@@ -3,15 +3,15 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>UV Weather</title>
+		<title>Solara UV Index</title>
 		<link rel="stylesheet" href="styles/style.css">
 		
 	</head>
 	<body>
 		<nav class="navigation">
-			<img src="/icons/ssc-logo.svg" class="logo" height="200px" width="200px" /> 
+			<img src="/icons/ssc-logo.svg" class="logo" height="150px" width="150px" /> 
 			<div class="navigation-controls">
-				<input id="uv-forecast__location-input" class="input" type="text"/>
+				<input id="uv-forecast__location-input" style="width: 200px; height: 50px; background-color: white; box-shadow: -2px 2px 0px black; padding-left: 10px; border-style: solid; border-width: 1px; border-style: solid; border-color: black;" type="text"/>
 				<button id="uv-forecast__geolocation-btn" class="btn geolocation-btn">
 					<svg class="geolocation-icon" xmlns="http://www.w3.org/2000/svg"  viewbox="0 0 24 24" ><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
 				</button>
@@ -20,7 +20,7 @@
 				<button id="uv-forecast__temperature-btn" class="btn btn-temp" data-unit="fahrenheit">&degF</button>
 			</div>
 		</nav>
-		<p id="uv-forecast__status" class="status">Enter your location and find out the UV forecast.</p>
+		<p id="uv-forecast__status" class="status">Enter your location and find out the UV forecast. 👆✨</p>
 
 		<main id="uv-forecast__main-content" class="main-content">
 			<div class="grid-container">
