@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>UV Weather</title>
+		<link rel="stylesheet" href="styles/style.css">
+		
+	</head>
+	<body>
+		<nav class="navigation">
+			<img src="/icons/ssc-logo.svg" class="logo" height="200px" width="200px" /> 
+			<div class="navigation-controls">
+				<input id="uv-forecast__location-input" class="input" type="text"/>
+				<button id="uv-forecast__geolocation-btn" class="btn geolocation-btn">
+					<svg class="geolocation-icon" xmlns="http://www.w3.org/2000/svg"  viewbox="0 0 24 24" ><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+				</button>
+				<button id="uv-forecast__temperature-btn" class="btn btn-temp btn-temp-active" data-unit="celsius">&degC</button>
+				<span class="separator"></span>
+				<button id="uv-forecast__temperature-btn" class="btn btn-temp" data-unit="fahrenheit">&degF</button>
+			</div>
+		</nav>
+		<p id="uv-forecast__status" class="status">Enter your location and find out the UV forecast.</p>
+
+		<main id="uv-forecast__main-content" class="main-content">
+			<div class="grid-container">
+				<div class="current-conditions">
+					<h2 class="section-title">Right now</h2>
+					<span id="uv-forecast__location-name" class="conditions-item location-name"></span>
+					<span id="uv-forecast__uv-index-value" class="conditions-item uv-index-value"></span>
+					<span id="uv-forecast__uv-index-label" class="conditions-item uv-index-label"></span>
+					<div class="current-weather-with-icons">
+						<div class="weather-item">
+							<img src="icons/thermometer.svg" alt="" class="weather-item-icon">
+							<span id="uv-forecast__current-temp" class="weather-item-value"></span>
+						</div>
+						<div class="weather-item">
+							<img src="icons/cloud.svg" alt="" class="weather-item-icon">
+							<p id="uv-forecast__current-clouds" class="weather-item-value"></p>
+						</div>
+						<div class="weather-item">
+							<img src="icons/sunrise.svg" alt="" class="weather-item-icon">
+							<p id="uv-forecast__sunrise-time" class="weather-item-value"></p>
+						</div>
+						<div class="weather-item">
+							<img src="icons/sunset.svg" alt="" class="weather-item-icon">
+							<p id="uv-forecast__sunset-time" class="weather-item-value"></p>
+						</div>
+					</div>
+					<div id="uv-forecast__current-weather-with-text" class="current-weather-with-text"></div>
+				</div>
+	
+				<div class="forecast-container">
+					<h2 class="section-title">Forecast</h2>
+					<div id="uv-forecast__forecast-btns">
+						<button id="uv-forecast__forecast-btn" class="btn btn-forecast-mode" data-mode="hourly">Hourly</button>
+						<button id="uv-forecast__forecast-btn" class="btn btn-forecast-mode" data-mode="daily">Daily</button>
+					</div>
+					<div id="uv-forecast__forecast-content" class="forecast-content"></div>
+				</div>
+	
+				<div id="uv-forecast__sunlight-exposure" class="sunlight-exposure-container">
+					<h2 class="section-title">Sunlight safe exposure</h2>
+					<div id="uv-forecast__skin-btns" class="skin-btns">
+						<button id="uv-forecast__skin-btn" data-skin="type-6" class="btn btn-skin-type">&#9995;&#127999;</button>
+						<button id="uv-forecast__skin-btn" data-skin="type-5" class="btn btn-skin-type">&#9995;&#127998;</button>
+						<button id="uv-forecast__skin-btn" data-skin="type-4" class="btn btn-skin-type">&#9995;&#127997;</button>
+						<button id="uv-forecast__skin-btn" data-skin="type-3" class="btn btn-skin-type">&#9995;&#127996;</button>
+						<button id="uv-forecast__skin-btn" data-skin="type-1" class="btn btn-skin-type">&#9995;&#127995;</button>
+					</div>
+					<div id="uv-forecast__exposure-times" class="exposure-times"></div>
+				</div>
+			</div>
+
+		</main>
+
+		
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu8k938-q1oBmjJK7uMrmNNBLOTccMCFo&libraries=places"></script>
+		<script src="scripts/index.mjs" type="module"></script>
+	</body>
+</html></body></html>

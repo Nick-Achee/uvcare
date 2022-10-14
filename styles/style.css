@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700;800&display=swap");
+
+body {
+  margin: 0;
+  background-color: #acd0e7;
+  transition: background-color 2s ease;
+}
+
+.logo {
+  margin-right: 2em;
+}
+
+
+.website-title {
+  font-family: "Overpass", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 20px 0;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.status {
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+}
+
+/* Navigation */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 200px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  background-color: transparent;
+  font-family: "Overpass", sans-serif;
+}
+
+::placeholder {
+  color: #000000;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.btn-temp {
+  margin: 0 5px;
+  transition: color 0.25s ease;
+}
+
+.btn-temp-active {
+  font-weight: 800;
+}
+
+.geolocation-btn {
+  margin: 0 20px;
+}
+.geolocation-icon {
+  height: 24px;
+  transition: fill 0.25s ease;
+}
+
+.separator {
+  height: 20px;
+  border-left: 1.25px solid #000000;
+}
+
+/* Content */
+.main-content {
+  display: none;
+  flex-direction: column;
+  margin-top: 80px;
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+}
+
+.conditions-item {
+  display: block;
+  margin: 0;
+  font-weight: 800;
+}
+
+.location-name {
+  margin-bottom: 70px;
+  font-size: 30px;
+}
+
+.uv-index-value {
+  margin-bottom: 25px;
+  font-size: 120px;
+  line-height: 120px;
+}
+
+.uv-index-label {
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.current-weather-with-icons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 90px;
+}
+
+.weather-item {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.weather-item:first-child {
+  margin-top: 5px;
+}
+
+.weather-item:nth-last-child(-n + 2) {
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.weather-item-icon {
+  height: 30px;
+  width: 30px;
+}
+.weather-item-value {
+  width: 52px;
+  height: 20px;
+  margin: 0 0 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.current-weather-with-text {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.curent-weather-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.weather-detail-value {
+  width: 80px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+}
+.weather-item-label {
+  width: 80px;
+  text-align: right;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* Forecast */
+
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.btn-forecast-mode {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  transition: color 0.25s ease;
+}
+
+.btn-forecast-mode-active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.forecast-content {
+  margin-top: 25px;
+}
+
+.forecast-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 10px 0;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.forecast-hour {
+  width: 50px;
+  text-align: left;
+}
+.weekday {
+  width: 30px;
+  text-align: left;
+}
+
+.daily-temp {
+  width: 100px;
+}
+
+.forecast-icon {
+  width: 30px;
+}
+
+.hourly-temp,
+.forecast-uv-value {
+  width: 60px;
+}
+
+.forecast-uv-label {
+  width: 100px;
+  text-align: left;
+}
+
+/* Vit D and safe exposure */
+
+.sunlight-exposure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.skin-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-skin-type {
+  margin: 0 10px;
+  font-size: 40px;
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+
+.btn-skin-type-active {
+  opacity: 1;
+}
+
+.exposure-times {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.exposure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 20px;
+}
+
+.exposure-value {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.exposure-label {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Mobile */
+
+@media (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .website-title {
+    margin-right: 50px;
+    font-size: 30px;
+  }
+
+  .input {
+    font-size: 18px;
+  }
+
+  .geolocation-icon {
+    height: 30px;
+  }
+
+  .btn {
+    font-size: 20px;
+  }
+
+  .main-content {
+    margin: 0;
+    align-items: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 300px 440px;
+    grid-template-rows: 550px 220px;
+    column-gap: 100px;
+  }
+
+  .uv-index-value {
+    font-size: 175px;
+  }
+
+  .forecast-container {
+    margin-top: 0;
+    align-items: flex-start;
+  }
+
+  .sunlight-exposure-container {
+    grid-column: 2/3;
+    align-items: flex-start;
+  }
+
+  .forecast-row {
+    font-size: 20px;
+  }
+
+  .weekday {
+    width: 40px;
+  }
+
+  .forecast-icon {
+    width: 35px;
+  }
+
+  .weekday,
+  .forecast-hour {
+    margin-right: 15px;
+  }
+
+  .daily-temp,
+  .hourly-temp,
+  .forecast-icon,
+  .forecast-uv-value,
+  .forecast-uv-label {
+    margin: 0 15px;
+  }
+
+  .btn-skin-type {
+    font-size: 50px;
+  }
+
+  .sunlight-exposure-container {
+    margin: 0;
+  }
+
+  .btn-forecast-mode:hover,
+  .btn-temp:hover {
+    color: #ffffff;
+  }
+
+  .geolocation-btn:hover .geolocation-icon {
+    fill: #ffffff;
+  }
+
+  .btn-skin-type:hover {
+    opacity: 1;
+  }
+}
